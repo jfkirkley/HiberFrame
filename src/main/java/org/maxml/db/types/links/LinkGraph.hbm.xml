@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="com.maxml.db.types.links.LinkGraph" table="linkgraph_tbl">
+     <id column="ID" name="id" type="java.lang.Integer">
+       <generator class="native"/>
+     </id>
+     <many-to-one class="com.maxml.db.types.links.Link" column="ROOT" name="rootLink" not-null="true" lazy="false" cascade="all" />
+<!--     <many-to-one class="com.maxml.db.types.ArrayOf2ByteInts" column="ArrayOf2ByteInts" name="arrayOf2ByteInts" cascade="all"/>-->
+   </class>
+</hibernate-mapping>

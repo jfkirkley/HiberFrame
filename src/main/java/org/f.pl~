@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+sub doit{
+  my ($fname) = @_;
+  open(FF, $fname);
+  @l = <FF>;
+  close FF;
+
+  open(FF, ">".$fname);
+  foreach(@l) {
+	if( /\r$/ ) {
+	  s/\r$//g;
+	}
+	print FF;
+  }
+  close FF;
+}
+
+
+foreach (@ARGV) {
+  doit($_);
+}

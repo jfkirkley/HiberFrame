@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.maxml.db.types.links.eCollection" table="eCollection_tbl">
+    <id column="ID" name="id" type="java.lang.Integer">
+    <generator class="native"/>
+    </id>
+    
+    <many-to-one cascade="all" class="com.maxml.db.types.links.pCollection" column="readOnlyCollectionId" name="readOnlyCollection" unique="true"/>
+    <many-to-one cascade="all" class="com.maxml.db.types.links.pCollection" column="writableCollectionId" name="writableCollection" unique="true"/>
+    
+    </class>
+</hibernate-mapping>
