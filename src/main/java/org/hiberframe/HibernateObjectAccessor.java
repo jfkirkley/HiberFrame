@@ -1,3 +1,10 @@
+/*
+Author: John Kirkley
+Copyright: Copyright 2011 John Kirkley.  All rights reserved.
+License: MIT License.
+Version: 1.0
+
+ */
 package org.hiberframe;
 
 import java.util.Collection;
